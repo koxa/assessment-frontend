@@ -38,7 +38,7 @@
 
 .conditionImage > img {
     margin-left: auto;
-    width: 60px;
+    width: 75px;
     min-width: 50px;
 }
 
@@ -54,14 +54,14 @@
 }
 
 .condition {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     font-weight: 200;
 }
 
 .location {
     display: flex;
     flex: 1;
-    font-size: 12px;
+    font-size: 0.9rem;
     font-weight: 300;
     justify-content: flex-end;
 }
@@ -77,15 +77,16 @@
     flex-direction: column;
     align-items: center;
     flex: 1;
+    margin-top: -16px;
 }
 
 .upcommingDay {
     font-weight: 300;
-    font-size: 12px;
+    font-size: 0.85rem;
 }
 
 .upcommingImage {
-    width: 30px;
+    width: 40px;
 }
 
 .upcommingImage > img {
