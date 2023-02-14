@@ -1,18 +1,23 @@
 const pageOne = require('./pageOne');
 const pageTwo = require('./pageTwo');
 const pageThree = require('./pageThree');
+const pageFour = require('./pageFour');
 
 module.exports = [
     {
         id: 'page-one',
-        data: pageOne,
+        data: pageOne
     },
     {
         id: 'page-two',
-        data: pageTwo,
+        data: pageTwo
     },
     {
         id: 'page-three',
-        data: pageThree,
+        data: pageThree
     },
+    {
+        id: 'page-four',
+        data: pageFour
+    }
 ];

@@ -2,9 +2,7 @@ import { useCallback, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useParams } from 'react-router';
 import Page404 from './pages/404';
-import PageOne from './pages/one';
-import PageThree from './pages/three';
-import PageTwo from './pages/two';
+import PageList from './pages/list';
 import { PageRender } from './types/page';
 import Layout from './pages/layout';
 
@@ -17,21 +15,16 @@ const App = () => {
     const getPage = useCallback((id: string, props: PageRender) => {
         switch (id) {
             case 'page-one':
-                return PageOne({ ...props });
             case 'page-two':
-                return PageTwo({ ...props });
             case 'page-three':
-                return PageThree({ ...props });
+            case 'page-four':
+                return PageList({ ...props });
             default:
                 return Page404({ ...props });
         }
     }, []);
 
-    return (
-        <Layout loading={loading} setLoading={setLoading}>
-            {getPage(id, { id, searchParams, setLoading })}
-        </Layout>
-    );
+    return <Layout loading={loading}>{getPage(id, { id, searchParams, setLoading })}</Layout>;
 };
 
 export default App;

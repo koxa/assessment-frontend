@@ -5,12 +5,14 @@ import App from './app';
 import { BrowserRouter as Router, Switch, Link, Route } from 'react-router-dom';
 
 const Root = () => (
-    <div>
+    <div className="home-page">
         <Link to="/page-one">Page One</Link>
         <br />
         <Link to="/page-two">Page Two</Link>
         <br />
         <Link to="/page-three">Page Three</Link>
+        <br />
+        <Link to="/page-four">Page Four (new)</Link>
     </div>
 );
 

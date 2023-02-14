@@ -13,6 +13,10 @@
     --card-max-height: 155px;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
@@ -21,6 +25,12 @@ body {
     background-color: var(--background-color);
 }
 
-* {
-    box-sizing: border-box;
+.home-page {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-size: 2rem;
 }

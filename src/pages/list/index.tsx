@@ -4,7 +4,7 @@ import classes from './styles.module.css';
 
 type Props = PageRender;
 
-const PageThree = ({ id, searchParams, setLoading }: Props) => {
+const PageList = ({ id, searchParams, setLoading }: Props) => {
     const queryId = searchParams.get('id');
     const { pageData, currentListComponents } = usePageLoad({ id, queryId, setLoading });
 
@@ -15,4 +15,4 @@ const PageThree = ({ id, searchParams, setLoading }: Props) => {
     return <div className={classes.container}>{currentListComponents}</div>;
 };
 
-export default PageThree;
+export default PageList;
