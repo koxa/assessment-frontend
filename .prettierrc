@@ -1,0 +1,11 @@
+{
+    "semi": true,
+    "endOfLine": "lf",
+    "insertFinalNewline": true,
+    "tabWidth": 4,
+    "useTabs": false,
+    "printWidth": 100,
+    "trimTrailingWhitespace": true,
+    "singleQuote": true,
+    "trailingComma": "none"
+}
