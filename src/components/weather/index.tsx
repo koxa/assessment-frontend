@@ -3,7 +3,6 @@ import { useCallback, useEffect, useState } from 'react';
 import { WeatherLocation } from '../../types/api';
 import { WeatherOptions } from '../../types/component';
 import { getWeatherLocation } from '../../utils/api';
-import Loading from '../loading';
 import classes from './styles.module.css';
 
 type Props = WeatherOptions;
@@ -41,7 +40,12 @@ const Weather = ({ lat, lon }: Props) => {
         };
         fetchWeatherData();
     }, [lat, lon]);
-    return weatherLocation ? (
+
+    if (!weatherLocation) {
+        return <div className={`${classes.container} ${classes.card}`}></div>;
+    }
+
+    return (
         <div className={`${classes.container} ${classes.card}`}>
             <div className={classes.sectionPart1}>
                 <div className={classes.conditionImage}>
@@ -70,8 +74,6 @@ const Weather = ({ lat, lon }: Props) => {
                 </div>
             </div>
         </div>
-    ) : (
-        <Loading />
     );
 };
 
