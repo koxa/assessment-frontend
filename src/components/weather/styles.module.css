@@ -10,8 +10,10 @@
     border: 1px solid var(--border-gray);
     overflow: hidden;
     margin: 8px 0;
+    min-height: var(--card-height);
     height: var(--card-height);
     max-height: var(--card-max-height);
+    user-select: none;
 }
 
 .sectionPart1 {

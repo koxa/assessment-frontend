@@ -25,7 +25,7 @@ export const usePageLoad = ({ id, queryId, setLoading }: Props) => {
         try {
             const data = await getPageFromId(id);
             const { components, variables } = data;
-            const lazyComponents = await getLazyComponents(components, { variables, setVariables });
+            const lazyComponents = await getLazyComponents(components);
             setPageData(data);
             setVariables(getVariables(variables));
             setComponentsRender(lazyComponents);
@@ -70,9 +70,14 @@ export const usePageLoad = ({ id, queryId, setLoading }: Props) => {
     useEffect(() => {
         if (pageData && componentsRender) {
             const { lists } = pageData;
-            setCurrentListComponents(
-                getCurrentListComponents(queryId, lists, componentsRender, variables, setVariables)
+            const listsComponents = getCurrentListComponents(
+                queryId,
+                lists,
+                componentsRender,
+                variables,
+                setVariables
             );
+            setCurrentListComponents(listsComponents);
         }
     }, [pageData, componentsRender, variables]);
 

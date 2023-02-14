@@ -33,6 +33,7 @@ export type ComponentsRender = {
     [key: ComponentId]: {
         component: any;
         options: ComponentOptions;
+        childrenId?: number;
     };
 };
 

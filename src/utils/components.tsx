@@ -3,13 +3,7 @@
 import { Component, ComponentId, ComponentsRender } from '../types/component';
 import { Variable } from '../types/variable';
 
-export async function getLazyComponents(
-    components: Component[],
-    variables?: {
-        variables: any;
-        setVariables: (value: any) => void;
-    }
-) {
+export async function getLazyComponents(components: Component[]) {
     const out: ComponentsRender = {};
     const lazyComponents = await Promise.all(
         components.map(async (data) => {
@@ -32,19 +26,16 @@ export async function getLazyComponents(
             return {
                 id,
                 component,
-                options: options,
+                options,
                 children
             };
         })
     );
     lazyComponents.forEach((component) => {
-        const lazyComponent = lazyComponents.find((comp) => comp.id == component.children) as any;
-        const children = lazyComponent ? (
-            <lazyComponent.component {...lazyComponent.options} {...variables} />
-        ) : undefined;
         out[component.id] = {
             component: component.component,
-            options: { ...component.options, children }
+            options: component.options,
+            childrenId: component?.children
         };
     });
     return out;
@@ -58,15 +49,18 @@ export function getListComponentsFromIds(
         setVariables: (value: any) => void;
     }
 ) {
-    return ids.map((id, key) => {
+    return ids.map((id, index) => {
         const componentRender = componentsRender[id];
         if (componentRender) {
-            const Component = componentRender.component as any;
+            const Component = componentRender.component;
             return (
                 <Component
-                    key={`build${key}${key + Object.keys(variables || {}).length}`}
+                    id={id}
+                    key={`build${index}`}
                     {...componentRender.options}
                     {...variables}
+                    childrenId={componentRender?.childrenId}
+                    componentsRender={componentsRender}
                 />
             );
         }

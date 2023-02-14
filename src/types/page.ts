@@ -1,4 +1,4 @@
-import { Component } from './component';
+import { Component, ComponentsRender } from './component';
 import { List } from './list';
 import { Variable } from './variable';
 
@@ -14,4 +14,6 @@ export type PageRender = {
     setLoading: (value: boolean) => void;
     variables?: any;
     setVariables?: (value: any) => void;
+    childrenId?: number;
+    componentsRender?: ComponentsRender;
 };

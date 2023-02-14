@@ -5,8 +5,9 @@ import classes from './styles.module.css';
 
 type Props = PageRender & ButtonOptions;
 
-const Button = ({ variables, setVariables, text, value, variable }: Props) => {
+const Button = ({ variables, setVariables, text, variable, value }: Props) => {
     const state = variables[variable];
+
     const onClick = useCallback(() => {
         if (setVariables && state !== value) {
             setVariables({
@@ -16,14 +17,19 @@ const Button = ({ variables, setVariables, text, value, variable }: Props) => {
         }
     }, [state, variables, variable]);
 
+    const getImage = useCallback((variable: string, value: string) => {
+        if (variable === 'location') {
+            return <img className={classes.location} alt="" src="/icons/location.svg" />;
+        }
+        return <img alt="" src={value === 'show' ? '/icons/show-eye.svg' : '/icons/hidden.svg'} />;
+    }, []);
+
     return (
         <div className={`${classes.container} ${classes.card}`} onClick={onClick}>
             <div className={classes.line}>
                 <span>{text}</span>
             </div>
-            <div className={`${classes.line} ${classes.state}`}>
-                <img alt="" src={value === 'show' ? '/icons/show-eye.svg' : '/icons/hidden.svg'} />
-            </div>
+            <div className={`${classes.line} ${classes.state}`}>{getImage(variable, value)}</div>
         </div>
     );
 };
