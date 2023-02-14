@@ -1,0 +1,95 @@
+.container {
+    display: flex;
+    flex: 1;
+    background-color: var(--white);
+    width: 100%;
+}
+
+.card {
+    border-radius: var(--card-border-radius);
+    border: 1px solid var(--border-gray);
+    overflow: hidden;
+    margin: 8px 0;
+    min-height: var(--card-height);
+    height: var(--card-height);
+    max-height: var(--card-max-height);
+    user-select: none;
+}
+
+.sectionPart1 {
+    display: flex;
+    flex: 1;
+    padding-top: 30px;
+    padding-left: 25px;
+}
+
+.sectionPart2 {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding-top: 25px;
+    padding-right: 25px;
+}
+
+.conditionImage {
+    display: flex;
+    flex-direction: column;
+}
+
+.conditionImage > img {
+    margin-left: auto;
+    width: 75px;
+    min-width: 50px;
+}
+
+.conditionName {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.temperature {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.condition {
+    font-size: 0.8rem;
+    font-weight: 200;
+}
+
+.location {
+    display: flex;
+    flex: 1;
+    font-size: 0.9rem;
+    font-weight: 300;
+    justify-content: flex-end;
+}
+
+.upcommings {
+    display: flex;
+    flex: 1;
+    padding-left: 20px;
+}
+
+.upcomming {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    margin-top: -16px;
+}
+
+.upcommingDay {
+    font-weight: 300;
+    font-size: 0.85rem;
+}
+
+.upcommingImage {
+    width: 40px;
+}
+
+.upcommingImage > img {
+    object-fit: contain;
+    width: 100%;
+}

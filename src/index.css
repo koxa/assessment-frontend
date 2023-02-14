@@ -1,6 +1,36 @@
+:root {
+    --background-color: #eeeeee;
+    --black: #101010;
+    --blue: #2e71f0;
+    --light-blue: #73b3ec;
+    --light-gray: #e3e6eb;
+    --gray: #808080;
+    --white: #ffffff;
+    --border-gray: #e2e2e2;
+
+    --card-border-radius: 20px;
+    --card-height: 155px;
+    --card-max-height: 155px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background-color: var(--background-color);
+}
+
+.home-page {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-size: 2rem;
 }

@@ -5,8 +5,8 @@ module.exports = {
         {
             name: 'show_weather',
             type: 'string',
-            initialValue: 'hide',
-        },
+            initialValue: 'hide'
+        }
     ],
     lists: [
         {
@@ -25,8 +25,8 @@ module.exports = {
             options: {
                 text: 'Show',
                 variable: 'show_weather',
-                value: 'show',
-            },
+                value: 'show'
+            }
         },
         {
             id: 2,
@@ -34,25 +34,25 @@ module.exports = {
             options: {
                 text: 'Hide',
                 variable: 'show_weather',
-                value: 'hide',
-            },
+                value: 'hide'
+            }
         },
         {
             id: 3,
             type: 'condition',
             options: {
                 variable: 'show_weather',
-                value: 'show',
+                value: 'show'
             },
-            children: 1,
+            children: 4
         },
         {
             id: 4,
             type: 'weather',
             options: {
                 lon: VALUES.WEATHER_LOCATIONS[1].lon,
-                lat: VALUES.WEATHER_LOCATIONS[1].lat,
+                lat: VALUES.WEATHER_LOCATIONS[1].lat
             }
-        },
-    ],
+        }
+    ]
 };

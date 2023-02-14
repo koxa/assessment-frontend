@@ -5,13 +5,13 @@ module.exports = {
         {
             name: 'show_image',
             type: 'string',
-            initialValue: 'hide',
+            initialValue: 'hide'
         },
         {
             name: 'location',
             type: 'string',
-            initialValue: 'ny',
-        },
+            initialValue: 'ny'
+        }
     ],
     lists: [
         {
@@ -20,36 +20,36 @@ module.exports = {
         },
         {
             id: 1,
-            components: [1],
+            components: [1]
         },
         {
             id: 2,
-            components: [2],
+            components: [2]
         },
         {
             id: 3,
-            components: [14, 11, 7, 6],
+            components: [14, 11, 7, 6]
         },
         {
             id: 4,
-            components: [15, 12, 5, 7],
+            components: [15, 12, 5, 7]
         },
         {
             id: 5,
-            components: [16, 13, 6, 5],
+            components: [16, 13, 6, 5]
         },
         {
             id: 6,
-            components: [17],
+            components: [17]
         },
         {
             id: 7,
-            components: [18],
+            components: [18]
         },
         {
             id: 8,
-            components: [19],
-        },
+            components: [19]
+        }
     ],
     components: [
         {
@@ -58,8 +58,8 @@ module.exports = {
             options: {
                 text: 'Show',
                 variable: 'show_image',
-                value: 'show',
-            },
+                value: 'show'
+            }
         },
         {
             id: 2,
@@ -67,26 +67,26 @@ module.exports = {
             options: {
                 text: 'Hide',
                 variable: 'show_image',
-                value: 'hide',
-            },
+                value: 'hide'
+            }
         },
         {
             id: 3,
             type: 'condition',
             options: {
                 variable: 'show_image',
-                value: 'hide',
+                value: 'hide'
             },
-            children: 1,
+            children: 1
         },
         {
             id: 4,
             type: 'condition',
             options: {
                 variable: 'show_image',
-                value: 'show',
+                value: 'show'
             },
-            children: 2,
+            children: 2
         },
         {
             id: 5,
@@ -94,8 +94,8 @@ module.exports = {
             options: {
                 text: 'New York',
                 variable: 'location',
-                value: 'ny',
-            },
+                value: 'ny'
+            }
         },
         {
             id: 6,
@@ -103,8 +103,8 @@ module.exports = {
             options: {
                 text: 'San Francisco',
                 variable: 'location',
-                value: 'ca',
-            },
+                value: 'ca'
+            }
         },
         {
             id: 7,
@@ -112,8 +112,8 @@ module.exports = {
             options: {
                 text: 'Chicago',
                 variable: 'location',
-                value: 'ch',
-            },
+                value: 'ch'
+            }
         },
         {
             id: 8,
@@ -122,7 +122,7 @@ module.exports = {
                 variable: 'location',
                 value: 'ny'
             },
-            children: 3,
+            children: 3
         },
         {
             id: 9,
@@ -131,7 +131,7 @@ module.exports = {
                 variable: 'location',
                 value: 'ca'
             },
-            children: 4,
+            children: 4
         },
         {
             id: 10,
@@ -140,14 +140,14 @@ module.exports = {
                 variable: 'location',
                 value: 'ch'
             },
-            children: 5,
+            children: 5
         },
         {
             id: 11,
             type: 'weather',
             options: {
                 lon: VALUES.WEATHER_LOCATIONS[0].lon,
-                lat: VALUES.WEATHER_LOCATIONS[0].lat,
+                lat: VALUES.WEATHER_LOCATIONS[0].lat
             }
         },
         {
@@ -155,7 +155,7 @@ module.exports = {
             type: 'weather',
             options: {
                 lon: VALUES.WEATHER_LOCATIONS[1].lon,
-                lat: VALUES.WEATHER_LOCATIONS[1].lat,
+                lat: VALUES.WEATHER_LOCATIONS[1].lat
             }
         },
         {
@@ -163,7 +163,7 @@ module.exports = {
             type: 'weather',
             options: {
                 lon: VALUES.WEATHER_LOCATIONS[2].lon,
-                lat: VALUES.WEATHER_LOCATIONS[2].lat,
+                lat: VALUES.WEATHER_LOCATIONS[2].lat
             }
         },
         {
@@ -171,42 +171,42 @@ module.exports = {
             type: 'condition',
             options: {
                 variable: 'show_image',
-                value: 'show',
+                value: 'show'
             },
-            children: 6,
+            children: 6
         },
         {
             id: 15,
             type: 'condition',
             options: {
                 variable: 'show_image',
-                value: 'show',
+                value: 'show'
             },
-            children: 7,
+            children: 7
         },
         {
             id: 16,
             type: 'condition',
             options: {
                 variable: 'show_image',
-                value: 'show',
+                value: 'show'
             },
-            children: 8,
+            children: 8
         },
         {
             id: 17,
             type: 'image',
-            options: VALUES.IMAGES[0],
+            options: VALUES.IMAGES[0]
         },
         {
             id: 18,
             type: 'image',
-            options: VALUES.IMAGES[1],
+            options: VALUES.IMAGES[1]
         },
         {
             id: 19,
             type: 'image',
-            options: VALUES.IMAGES[2],
-        },
-    ],
+            options: VALUES.IMAGES[2]
+        }
+    ]
 };
