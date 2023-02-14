@@ -14,11 +14,11 @@ const Weather = ({ lat, lon }: Props) => {
     const getConditionImage = useCallback((condition: string) => {
         switch (condition) {
             case 'rain':
-                return <img src="/icons/rain.png" alt="" />;
+                return <img src="/icons/rain.svg" alt="" />;
             case 'clear-day':
-                return <img src="/icons/sun.png" alt="" />;
+                return <img src="/icons/clear-day.svg" alt="" />;
             default:
-                return <img src="/icons/cloud.png" alt="" />;
+                return <img src="/icons/cloudy.svg" alt="" />;
         }
     }, []);
 

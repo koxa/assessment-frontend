@@ -64,7 +64,7 @@ export function getListComponentsFromIds(
                 />
             );
         }
-        return <>Not found ${id}</>;
+        return <>Not found id {id}</>;
     });
 }
 

@@ -16,20 +16,19 @@ const Condition = ({
         return null;
     }
 
-    const componentRender = componentsRender[childrenId];
-    const Component = componentRender.component;
-    const props = {
-        ...componentRender.options,
+    const { childrenId: childId, component: Children, options } = componentsRender[childrenId];
+    const childrenProps = {
+        ...options,
         id,
         key: `cond${childrenId}${id}${Number(childrenId + id)}`,
-        childrenId: componentRender.childrenId,
+        childrenId: childId,
         variables,
         setVariables,
         componentsRender
     };
 
     const state = variables[variable];
-    return state === value ? <Component {...props} /> : null;
+    return state === value ? <Children {...childrenProps} /> : null;
 };
 
 export default Condition;

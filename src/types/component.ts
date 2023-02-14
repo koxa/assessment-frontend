@@ -27,7 +27,7 @@ export type ComponentOptions =
     | ButtonOptions
     | ConditionOptions
     | WeatherOptions
-    | { variables?: any; children?: any };
+    | { variables?: any };
 
 export type ComponentsRender = {
     [key: ComponentId]: {
